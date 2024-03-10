@@ -55,7 +55,7 @@ mv target/shipping-1.0.jar shipping.jar &>>$LOGFILE
 
 VALIDATE $? "renaming shipping jar"
 
-cp /home/centos/roboshop-shell-tf/shipping.service /etc/systemd/system/shipping.service &>>$LOGFILE
+cp /home/centos/My-roboshop-shell-tf/shipping.service /etc/systemd/system/shipping.service &>>$LOGFILE
 
 VALIDATE $? "copying shipping service"
 
@@ -76,7 +76,7 @@ yum install mysql -y  &>>$LOGFILE
 
 VALIDATE $? "Installing MySQL client"
 
-mysql -h mysql.joindevops.online -uroot -pRoboShop@1 < /app/schema/shipping.sql  &>>$LOGFILE
+mysql -h mysql.cloudevops.cloud -uroot -pRoboShop@1 < /app/schema/shipping.sql  &>>$LOGFILE
 
 VALIDATE $? "Loaded countries and cities info"
 
